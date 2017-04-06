@@ -7,17 +7,17 @@ feature 'Add tags' do
 
     click_button('Create Link')
     link = Link.first
-    expect(link.tags.map(&:name)).to include('search')
+      expect(link.tags.map(&:name)).to include('search')
   end
 
-  scenario 'adding multiple tags to a link' do
-    visit '/links/new'
-    fill_in(:title, :with => 'Tree')
-    fill_in(:url, :with => 'https://www.tree.com/')
-    fill_in(:tags, with: 'nature green')
 
-    click_button('Create Link')
+  scenario 'Allows a user to add multiple tags to a link' do
+    visit '/links/new'
+    fill_in(:url, :with => 'https://uk.yahoo.com')
+    fill_in(:title, :with => 'Yahoo')
+    fill_in(:tags, with: 'search tech')
+    click_button 'Create Link'
     link = Link.first
-    expect(link.tags.map(&:name)).to include('nature', 'green')
+    expect(link.tags.map(&:name)).to include('search', 'tech')
   end
 end
