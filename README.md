@@ -4,7 +4,7 @@
 
 As a time-pressed user
 So that I can access useful websites quickly
-I want to see a list of links on the homepage
+I want to see a list of links on the homepage.
 
 
 As a time-pressed user
