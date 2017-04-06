@@ -14,4 +14,6 @@ class User
   def password=(password)
     self.password_digest = BCrypt::Password.create(password)
   end
+
+  validates_confirmation_of :password
 end
