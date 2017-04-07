@@ -2,7 +2,7 @@
 
 <form action='/users' method='post'>
   <label for='email'>
-    Email:  <input type='text' name='email'>
+    Email:  <input type='text' name='email' value='<%= @user.email%>'>
   </label>
 
   <label for='password'>
@@ -12,5 +12,5 @@
   <label for='password_confirmation'>
     Confirm Password: <input type='password' name='password_confirmation'>
   </label>
-      <input type='submit' value='Sign Up Now'>
+    <input type='submit' value='Sign Up Now'>
 </form>
